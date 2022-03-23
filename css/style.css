@@ -1,0 +1,121 @@
+/* Color  */
+:root
+{
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark: hsl(229, 23%, 23%);
+    --Dark-grayish: hsl(227, 10%, 46%);
+}
+
+/* Global STYLE  */
+*
+{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body
+{
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;;
+}
+.main
+{
+    background-color: var(--Dark-cyan);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.main::before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/bg-pattern-top.svg");
+    background-repeat: no-repeat;
+    display: block;
+    top: -50%;
+    left: -15%;
+}
+.main::after
+{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-image: url("/images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat;
+    display: block;
+    bottom:0;
+    right: 0;
+}
+.main .container
+{
+    background-color: white;
+    text-align: center;
+    max-width: 350px;
+    overflow: hidden;
+    border-radius: 1rem;
+    z-index: 999;
+}
+.main .container .uper-container
+{
+    height: 150px;
+    width: 350px;
+    background-image: url("/images/bg-pattern-card.svg");
+    background-size: cover;
+}
+.main .container .image-sec
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    overflow: hidden;
+    margin: -50px auto -30px auto;
+}
+.main .container .image-sec img
+{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.main .card-body
+{
+    margin-top: 55px;
+    height: 250px;
+    line-height: 1.8;
+    margin-bottom: -55px;
+}
+.main .card-body .name
+{
+    font-size: 1.5rem;
+}
+.card-body .age , .card-body .city
+{
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--Dark-grayish);
+    letter-spacing: 1.4px;
+}
+.card-body .acctivity
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 40px;
+    border-top: 1px solid hsl(0, 10%, 88%);
+    margin-top: 1.3rem;
+
+}
+.card-body .act
+{
+    font-size: .9rem;
+    font-weight: 300;
+    display: block;
+    color: var(--Very-dark);
+    letter-spacing: .1rem;
+}
